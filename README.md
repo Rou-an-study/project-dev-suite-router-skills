@@ -343,13 +343,8 @@ PRD、DESIGN、ARCHITECTURE、TODO 不是形式主义。
 
 ---
 
-## 14. License
 
-如果你希望别人自由学习、复制、修改和使用，可以使用 MIT License。
-
----
-
-## 15. 一句话总结
+## 14. 总结
 
 这套项目开发 Skills 的核心不是“让 AI 快点写代码”，而是：
 
