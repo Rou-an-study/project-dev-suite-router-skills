@@ -1,0 +1,7 @@
+interface:
+  display_name: "Project Dev Suite Router"
+  short_description: "Gatekeeper for an isolated software project workflow."
+  default_prompt: "Use $project-dev-suite-router to ask whether to enable the isolated project development workflow."
+
+policy:
+  allow_implicit_invocation: true
