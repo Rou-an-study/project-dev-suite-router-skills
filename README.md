@@ -136,6 +136,30 @@ $CODEX_HOME/skills/project-dev-suite-router
 
 安装后，Codex 会通过 `SKILL.md` 中的描述识别这个 Skill。
 
+如果你使用的是其他 Agent，例如 Claude、Trae 或其他支持读取仓库内容的 AI 编程助手，也可以直接把本仓库链接发送给 Agent，让它自动扫描仓库结构，并**作为独立项目开发流程套件进行隔离安装或适配**。
+
+无论使用 Codex 还是其他 Agent，都建议遵守以下原则：
+
+- 不要覆盖用户原有的全局 rules、skills、memory 或 workflow。
+- 不要把本套件内容拆散混入其他无关规则中。
+- 保持 `project-dev-suite-router` 作为独立入口。
+- 仅在用户明确需要项目开发、版本迭代、发布门禁或维护 hotfix 时触发。
+- 如果目标 Agent 不支持 Codex Skills 目录结构，应转换成该 Agent 支持的独立规则包、独立工作流或独立项目模板，而不是污染全局配置。
+
+Codex 也可以使用这种方式：把仓库链接提供给 Codex，让它读取 `SKILL.md`、`references/` 和模板文件后，协助复制到正确的 skills 目录，或转换成当前环境支持的**独立套件**。
+
+建议给 Agent 的提示示例：
+
+```text
+请读取这个仓库，并将其中的项目开发流程套件作为一个独立能力进行安装或适配。
+要求：
+1. 不要覆盖或污染我已有的全局 rules、skills、memory、workflow。
+2. 保持 project-dev-suite-router 作为独立入口。
+3. 只有在我明确需要项目开发、版本迭代、发布门禁或维护 hotfix 时才触发。
+4. 如果你的环境不支持 Codex Skills 目录结构，请转换成等价的独立规则包或独立工作流。
+5. 保留 L0/L1/L2/L3 流程强度分级、项目事实源、测试门禁和发布检查机制。
+```
+
 ---
 
 ## 6. 使用方式
@@ -341,7 +365,6 @@ PRD、DESIGN、ARCHITECTURE、TODO 不是形式主义。
 - 重视安全、权限、数据和发布质量的人。
 
 ---
-
 
 ## 14. 总结
 
