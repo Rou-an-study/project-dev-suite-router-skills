@@ -78,7 +78,6 @@
 
 ```text
 project-dev-suite-router/
-├─ README.md
 ├─ SKILL.md
 ├─ agents/
 │  └─ openai.yaml
